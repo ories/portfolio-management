@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..600&amp;family=SUSE:wght@400..700&amp;family=SUSE+Mono:wght@400..500&amp;display=swap" rel="stylesheet">
+<style>
+body { margin: 0; background: #E6E1D3; }
+a { color: #087CA7; }
+a:hover { color: oklch(0.44 0.11 233); }
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%" data-uneditable="">
+
+<section data-label="Title" data-screen-label="01" data-speaker-notes="Frame the deck as a reference rather than a pitch. Four lenses, one portfolio." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:96px 96px 56px;display:flex;flex-direction:column;gap:40px">
+  <div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Portfolio investment blueprint</div>
+  <div style="display:flex;flex-direction:column;gap:36px;margin-top:auto">
+    <h1 style="font-family:'Newsreader',serif;font-size:150px;line-height:0.94;font-weight:500;margin:0;letter-spacing:-0.02em;max-width:1500px;text-wrap:pretty">Five ways to look at a software portfolio</h1>
+    <div style="width:180px;height:6px;background:#087CA7"></div>
+    <p style="font-size:34px;line-height:1.35;color:rgba(38,26,32,0.7);max-width:1160px;margin:0">Growth–Share, Innovation Ambition, Ansoff, Wardley Mapping, Cost of Delay. <br><br>Practical decision frameworks for where the next unit of engineering capacity goes, and how to defend the answer.</p>
+  </div>
+  <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>01 / 28</span></div>
+</section>
+
+<section data-label="What each answers" data-screen-label="02" data-speaker-notes="Five lenses, each answering a question the others cannot." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:70px 96px 50px;display:flex;flex-direction:column;gap:26px">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Orientation</div>
+    <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">5 models and the questions they answer</h2>
+  </div>
+  <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:12px">
+    <div style="flex:1;display:grid;grid-template-columns:1.1fr 1.3fr 2fr;gap:30px;align-items:center;padding:14px 28px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)">
+      <div style="font-size:28px;font-weight:600;display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:grid;grid-template-columns:11px 11px;grid-template-rows:11px 11px;gap:3px;flex:none;justify-content:center;align-content:center"><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span></span><span>Growth–Share</span></div>
+      <div style="font-family:'Newsreader',serif;font-size:34px;line-height:1.1">Who pays for whom?</div>
+      <p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.7)">A cash map. Which products fund the portfolio, and which are quietly consuming it.</p>
+    </div>
+    <div style="flex:1;display:grid;grid-template-columns:1.1fr 1.3fr 2fr;gap:30px;align-items:center;padding:14px 28px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)">
+      <div style="font-size:28px;font-weight:600;display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;flex:none"><span style="width:22px;height:22px;box-sizing:border-box;border:2px solid rgba(38,26,32,0.3);display:flex;align-items:center;justify-content:center"><span style="width:13px;height:13px;box-sizing:border-box;border:2px solid #087CA7;display:flex;align-items:center;justify-content:center"><span style="width:4px;height:4px;background:#087CA7;display:block"></span></span></span></span><span>Innovation Ambition</span></div>
+      <div style="font-family:'Newsreader',serif;font-size:34px;line-height:1.1">How far from home are we betting?</div>
+      <p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.7)">The only allocation lens here. Splits the budget across core, adjacent and transformational work.</p>
+    </div>
+    <div style="flex:1;display:grid;grid-template-columns:1.1fr 1.3fr 2fr;gap:30px;align-items:center;padding:14px 28px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)">
+      <div style="font-size:28px;font-weight:600;display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:grid;grid-template-columns:11px 11px;grid-template-rows:11px 11px;gap:3px;flex:none;justify-content:center;align-content:center"><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span></span><span>Ansoff</span></div>
+      <div style="font-family:'Newsreader',serif;font-size:34px;line-height:1.1">Which direction does growth come from?</div>
+      <p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.7)">Four growth moves ranked by risk, so a diversification bet clears a higher bar than a pricing project.</p>
+    </div>
+    <div style="flex:1;display:grid;grid-template-columns:1.1fr 1.3fr 2fr;gap:30px;align-items:center;padding:14px 28px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)">
+      <div style="font-size:28px;font-weight:600;display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;gap:3px;flex:none"><span style="width:8px;height:16px;background:rgba(38,26,32,0.2);display:block"></span><span style="width:8px;height:16px;background:rgba(38,26,32,0.38);display:block"></span><span style="width:8px;height:16px;background:#087CA7;display:block"></span><span style="width:8px;height:16px;background:#087CA7;display:block"></span></span><span>Wardley Mapping</span></div>
+      <div style="font-family:'Newsreader',serif;font-size:34px;line-height:1.1">Should this component exist at all?</div>
+      <p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.7)">Build, buy or rent, per component. The only lens that finds cost with no revenue line attached.</p>
+    </div>
+    <div style="flex:1;display:grid;grid-template-columns:1.1fr 1.3fr 2fr;gap:30px;align-items:center;padding:14px 28px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)">
+      <div style="font-size:28px;font-weight:600;display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;gap:4px;flex:none"><span style="width:7px;height:24px;background:#087CA7;display:block"></span><span style="width:7px;height:16px;background:rgba(38,26,32,0.45);display:block"></span><span style="width:7px;height:9px;background:rgba(38,26,32,0.28);display:block"></span></span><span>Cost of Delay</span></div>
+      <div style="font-family:'Newsreader',serif;font-size:34px;line-height:1.1">What order should we do it in?</div>
+      <p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.7)">Produces a ranked queue rather than a classification. Usually reorders the plan for free.</p>
+    </div>
+  </div>
+  <div style="padding:22px 32px;background:#DCE8EC;font-size:26px;line-height:1.4">Cash reality constrains ambition, ambition picks the growth vector, the map decides what to build, and the queue decides what happens first.</div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>02 / 28</span></div>
+</section>
+
+<section data-label="Which one to use" data-screen-label="27" data-speaker-notes="Pick the lens from the argument you are having, not from the framework you like." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:60px 88px 46px;display:flex;flex-direction:column;gap:24px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Choosing</div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Start from the argument you are having</h2>
+    </div>
+    <p style="font-size:24px;line-height:1.4;color:rgba(38,26,32,0.62);max-width:560px;margin:0">Each of the five settles a different dispute. Find the sentence you keep hearing and read across. If the argument is about one uncertain bet rather than the portfolio, none of them will settle it, so price it as an option instead.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:grid;grid-template-columns:300px 74px 1fr;grid-template-rows:repeat(5,1fr)">
+    <div style="grid-row:1 / span 5;display:flex;align-items:center;padding-right:20px">
+      <div style="padding:30px 30px;background:#DCE8EC;border:1px solid #087CA7;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'SUSE Mono',monospace;font-size:24px;color:oklch(0.44 0.11 233)">START</div>
+        <div style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05">What is the disagreement actually about?</div>
+      </div>
+    </div>
+    <div style="grid-row:1 / span 5;position:relative">
+      <div style="position:absolute;left:50%;top:10%;bottom:10%;border-left:2px solid rgba(38,26,32,0.35)"></div>
+      <div style="position:absolute;top:50%;left:0;right:50%;border-top:2px solid rgba(38,26,32,0.35)"></div>
+    </div>
+    <div style="grid-column:3;grid-row:1;display:flex;align-items:center;gap:0">
+      <div style="width:34px;border-top:2px solid rgba(38,26,32,0.35);margin-left:-34px;flex:none"></div>
+      <div style="flex:1;display:grid;grid-template-columns:1.25fr 1fr;gap:26px;align-items:center;padding:12px 26px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)">
+        <div style="font-family:'Newsreader',serif;font-size:30px;line-height:1.2">“We cannot agree which products deserve the investment.”</div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding-left:26px;border-left:1px solid rgba(38,26,32,0.14)">
+          <div style="display:flex;align-items:center;gap:12px"><span style="font-size:27px;font-weight:600">Growth–Share</span><span style="width:44px;height:26px;display:grid;grid-template-columns:11px 11px;grid-template-rows:11px 11px;gap:3px;flex:none;justify-content:center;align-content:center"><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span></span></div>
+          <div style="font-size:24px;line-height:1.3;color:rgba(38,26,32,0.65)">Puts the direction of cash on one page and names the funding source.</div>
+        </div>
+      </div>
+    </div>
+    <div style="grid-column:3;grid-row:2;display:flex;align-items:center;gap:0">
+      <div style="width:34px;border-top:2px solid rgba(38,26,32,0.35);margin-left:-34px;flex:none"></div>
+      <div style="flex:1;display:grid;grid-template-columns:1.25fr 1fr;gap:26px;align-items:center;padding:12px 26px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)">
+        <div style="font-family:'Newsreader',serif;font-size:30px;line-height:1.2">“We claim we invest in the future, but nobody can show the split.”</div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding-left:26px;border-left:1px solid rgba(38,26,32,0.14)">
+          <div style="display:flex;align-items:center;gap:12px"><span style="font-size:27px;font-weight:600">Innovation Ambition</span><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;flex:none"><span style="width:22px;height:22px;box-sizing:border-box;border:2px solid rgba(38,26,32,0.3);display:flex;align-items:center;justify-content:center"><span style="width:13px;height:13px;box-sizing:border-box;border:2px solid #087CA7;display:flex;align-items:center;justify-content:center"><span style="width:4px;height:4px;background:#087CA7;display:block"></span></span></span></span></div>
+          <div style="font-size:24px;line-height:1.3;color:rgba(38,26,32,0.65)">Turns intent into a band of spend, with a gate and a metric per band.</div>
+        </div>
+      </div>
+    </div>
+    <div style="grid-column:3;grid-row:3;display:flex;align-items:center;gap:0">
+      <div style="width:34px;border-top:2px solid rgba(38,26,32,0.35);margin-left:-34px;flex:none"></div>
+      <div style="flex:1;display:grid;grid-template-columns:1.25fr 1fr;gap:26px;align-items:center;padding:12px 26px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)">
+        <div style="font-family:'Newsreader',serif;font-size:30px;line-height:1.2">“Every initiative on the list sounds equally strategic.”</div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding-left:26px;border-left:1px solid rgba(38,26,32,0.14)">
+          <div style="display:flex;align-items:center;gap:12px"><span style="font-size:27px;font-weight:600">Ansoff</span><span style="width:44px;height:26px;display:grid;grid-template-columns:11px 11px;grid-template-rows:11px 11px;gap:3px;flex:none;justify-content:center;align-content:center"><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span></span></div>
+          <div style="font-size:24px;line-height:1.3;color:rgba(38,26,32,0.65)">Names the growth move and prices its risk against the alternatives.</div>
+        </div>
+      </div>
+    </div>
+    <div style="grid-column:3;grid-row:4;display:flex;align-items:center;gap:0">
+      <div style="width:34px;border-top:2px solid rgba(38,26,32,0.35);margin-left:-34px;flex:none"></div>
+      <div style="flex:1;display:grid;grid-template-columns:1.25fr 1fr;gap:26px;align-items:center;padding:12px 26px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)">
+        <div style="font-family:'Newsreader',serif;font-size:30px;line-height:1.2">“We are building things our competitors simply buy.”</div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding-left:26px;border-left:1px solid rgba(38,26,32,0.14)">
+          <div style="display:flex;align-items:center;gap:12px"><span style="font-size:27px;font-weight:600">Wardley Mapping</span><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;gap:3px;flex:none"><span style="width:8px;height:16px;background:rgba(38,26,32,0.2);display:block"></span><span style="width:8px;height:16px;background:rgba(38,26,32,0.38);display:block"></span><span style="width:8px;height:16px;background:#087CA7;display:block"></span><span style="width:8px;height:16px;background:#087CA7;display:block"></span></span></div>
+          <div style="font-size:24px;line-height:1.3;color:rgba(38,26,32,0.65)">Places each component on evolution and settles build, buy or rent.</div>
+        </div>
+      </div>
+    </div>
+    <div style="grid-column:3;grid-row:5;display:flex;align-items:center;gap:0">
+      <div style="width:34px;border-top:2px solid rgba(38,26,32,0.35);margin-left:-34px;flex:none"></div>
+      <div style="flex:1;display:grid;grid-template-columns:1.25fr 1fr;gap:26px;align-items:center;padding:12px 26px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)">
+        <div style="font-family:'Newsreader',serif;font-size:30px;line-height:1.2">“Everything is approved and nothing is finished.”</div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding-left:26px;border-left:1px solid rgba(38,26,32,0.14)">
+          <div style="display:flex;align-items:center;gap:12px"><span style="font-size:27px;font-weight:600">Cost of Delay</span><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;gap:4px;flex:none"><span style="width:7px;height:24px;background:#087CA7;display:block"></span><span style="width:7px;height:16px;background:rgba(38,26,32,0.45);display:block"></span><span style="width:7px;height:9px;background:rgba(38,26,32,0.28);display:block"></span></span></div>
+          <div style="font-size:24px;line-height:1.3;color:rgba(38,26,32,0.65)">Produces an order, and usually reorders the plan for free.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>03 / 28</span></div>
+</section>
+
+<section data-label="The portfolio" data-screen-label="03" data-speaker-notes="Say clearly that Arclight is invented. Learn the five products once; every framework re-reads the same portfolio." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:70px 96px 50px;display:flex;flex-direction:column;gap:26px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Fictional case study</div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Meet Arclight, the portfolio we will use throughout</h2>
+    </div>
+    <p style="font-size:24px;line-height:1.4;color:rgba(38,26,32,0.62);max-width:600px;margin:0">Arclight does not exist. It is an invented SaaS company, sized to be plausible. Its five products and their marks recur on every applied slide in this deck, so the five lenses can be compared on one portfolio rather than described in the abstract.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:grid;grid-template-columns:repeat(5,1fr);gap:24px">
+    <div style="padding:28px 26px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+      <div style="height:30px;display:flex;align-items:center"><span style="width:26px;height:26px;background:#2A1D24;display:inline-block"></span></div>
+      <div style="font-family:'Newsreader',serif;font-size:42px;line-height:1.0">Core Platform</div>
+      <p style="font-size:24px;line-height:1.35;margin:0;color:rgba(38,26,32,0.7)">Workflow platform, nine years old</p>
+      <div style="flex:1;min-height:0;display:flex;align-items:flex-end;padding:16px 0"><div style="width:100%;height:100%;background:oklch(0.40 0.10 233);min-height:6px"></div></div>
+      <div style="padding-top:16px;border-top:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'SUSE Mono',monospace;font-size:26px;display:flex;justify-content:space-between"><span>$74M</span><span style="color:oklch(0.44 0.11 233)">4%</span></div>
+        <div style="font-family:'SUSE Mono',monospace;font-size:24px;color:rgba(38,26,32,0.5)">105 eng · $21M</div>
+        <div style="font-size:24px;line-height:1.3;color:rgba(38,26,32,0.6)">Funds everything else</div>
+      </div>
+    </div>
+    <div style="padding:28px 26px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+      <div style="height:30px;display:flex;align-items:center"><span style="width:26px;height:26px;border-radius:50%;background:#087CA7;display:inline-block"></span></div>
+      <div style="font-family:'Newsreader',serif;font-size:42px;line-height:1.0">Flow</div>
+      <p style="font-size:24px;line-height:1.35;margin:0;color:rgba(38,26,32,0.7)">Automation, the growth engine</p>
+      <div style="flex:1;min-height:0;display:flex;align-items:flex-end;padding:16px 0"><div style="width:100%;height:28%;background:#087CA7;min-height:6px"></div></div>
+      <div style="padding-top:16px;border-top:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'SUSE Mono',monospace;font-size:26px;display:flex;justify-content:space-between"><span>$21M</span><span style="color:oklch(0.44 0.11 233)">63%</span></div>
+        <div style="font-family:'SUSE Mono',monospace;font-size:24px;color:rgba(38,26,32,0.5)">64 eng · $12.8M</div>
+        <div style="font-size:24px;line-height:1.3;color:rgba(38,26,32,0.6)">Takes the reinvestment</div>
+      </div>
+    </div>
+    <div style="padding:28px 26px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+      <div style="height:30px;display:flex;align-items:center"><span style="width:21px;height:21px;background:#087CA7;transform:rotate(45deg);display:inline-block"></span></div>
+      <div style="font-family:'Newsreader',serif;font-size:42px;line-height:1.0">Insights</div>
+      <p style="font-size:24px;line-height:1.35;margin:0;color:rgba(38,26,32,0.7)">BI add-on, weak position</p>
+      <div style="flex:1;min-height:0;display:flex;align-items:flex-end;padding:16px 0"><div style="width:100%;height:12%;background:#087CA7;min-height:6px"></div></div>
+      <div style="padding-top:16px;border-top:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'SUSE Mono',monospace;font-size:26px;display:flex;justify-content:space-between"><span>$9M</span><span style="color:oklch(0.44 0.11 233)">38%</span></div>
+        <div style="font-family:'SUSE Mono',monospace;font-size:24px;color:rgba(38,26,32,0.5)">26 eng · $5.2M</div>
+        <div style="font-size:24px;line-height:1.3;color:rgba(38,26,32,0.6)">On a share gate</div>
+      </div>
+    </div>
+    <div style="padding:28px 26px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+      <div style="height:30px;display:flex;align-items:center"><span style="width:24px;height:24px;border-radius:50%;border:5px solid #087CA7;display:inline-block"></span></div>
+      <div style="font-family:'Newsreader',serif;font-size:42px;line-height:1.0">Agent</div>
+      <p style="font-size:24px;line-height:1.35;margin:0;color:rgba(38,26,32,0.7)">AI execution, pre-revenue</p>
+      <div style="flex:1;min-height:0;display:flex;align-items:flex-end;padding:16px 0"><div style="width:100%;height:3%;background:#087CA7;min-height:6px"></div></div>
+      <div style="padding-top:16px;border-top:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'SUSE Mono',monospace;font-size:26px;display:flex;justify-content:space-between"><span>$1M</span><span style="color:oklch(0.44 0.11 233)">—</span></div>
+        <div style="font-family:'SUSE Mono',monospace;font-size:24px;color:rgba(38,26,32,0.5)">19 eng · $3.8M</div>
+        <div style="font-size:24px;line-height:1.3;color:rgba(38,26,32,0.6)">Held as an option</div>
+      </div>
+    </div>
+    <div style="padding:28px 26px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+      <div style="height:30px;display:flex;align-items:center"><span style="width:28px;height:8px;background:rgba(38,26,32,0.45);display:inline-block"></span></div>
+      <div style="font-family:'Newsreader',serif;font-size:42px;line-height:1.0">Field</div>
+      <p style="font-size:24px;line-height:1.35;margin:0;color:rgba(38,26,32,0.7)">Mobile, in decline</p>
+      <div style="flex:1;min-height:0;display:flex;align-items:flex-end;padding:16px 0"><div style="width:100%;height:9%;background:oklch(0.76 0.05 233);min-height:6px"></div></div>
+      <div style="padding-top:16px;border-top:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'SUSE Mono',monospace;font-size:26px;display:flex;justify-content:space-between"><span>$6M</span><span style="color:oklch(0.44 0.11 233)">-7%</span></div>
+        <div style="font-family:'SUSE Mono',monospace;font-size:24px;color:rgba(38,26,32,0.5)">6 eng · $1.2M</div>
+        <div style="font-size:24px;line-height:1.3;color:rgba(38,26,32,0.6)">Sunset at renewal</div>
+      </div>
+    </div>
+  </div>
+  <div style="padding:22px 32px;background:#DCE8EC;font-size:26px;line-height:1.4">Bars show ARR to scale. Second line is headcount and annual engineering cost at $200K fully loaded. Total $111M ARR against $44M of engineering, and Core Platform alone absorbs nearly half the team.</div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>04 / 28</span></div>
+</section>
+
+<section data-label="BCG · Matrix" data-screen-label="03" data-speaker-notes="Note the cutoffs out loud: 10% market growth, 1.0x relative share. Without them the matrix is decoration." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:64px 96px 48px;display:flex;flex-direction:column;gap:24px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:grid;grid-template-columns:11px 11px;grid-template-rows:11px 11px;gap:3px;flex:none;justify-content:center;align-content:center"><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">BCG Growth–Share</div></div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">BCG Growth–Share Matrix</h2>
+    </div>
+    <p style="font-size:26px;line-height:1.4;color:rgba(38,26,32,0.7);max-width:620px;margin:0">Two axes, and two thresholds that decide where each product lands: 10% market growth, 1.0× relative share. Everything else is judgment dressed as analysis.</p>
+  </div>
+  <div style="flex:1;display:grid;grid-template-columns:64px 1fr 1fr;grid-template-rows:1fr 1fr 60px">
+    <div style="grid-column:1;grid-row:1;writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;justify-content:center;font-family:'SUSE Mono',monospace;font-size:24px;letter-spacing:0.04em;color:oklch(0.44 0.11 233)">&gt; 10% market growth</div>
+    <div style="grid-column:1;grid-row:2;writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;justify-content:center;font-family:'SUSE Mono',monospace;font-size:24px;letter-spacing:0.04em;color:rgba(38,26,32,0.5)">&lt; 10% market growth</div>
+    <div style="grid-column:2;grid-row:1;padding:28px 32px;display:flex;flex-direction:column;gap:12px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.16)">
+      <div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.45)">High growth · low share</div>
+      <div style="font-family:'Newsreader',serif;font-size:52px;line-height:1.0">Question Marks</div>
+      <p style="font-size:24px;line-height:1.45;margin:0;color:rgba(38,26,32,0.75)">Cheap to start, expensive to keep. Fund in tranches against a named share target and a kill date.</p>
+    </div>
+    <div style="grid-column:3;grid-row:1;padding:28px 32px;display:flex;flex-direction:column;gap:12px;background:#DCE8EC;border:1px solid #087CA7">
+      <div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(0.44 0.11 233)">High growth · high share</div>
+      <div style="font-family:'Newsreader',serif;font-size:52px;line-height:1.0">Stars</div>
+      <p style="font-size:24px;line-height:1.45;margin:0;color:rgba(38,26,32,0.8)">Reinvest ahead of margin. Underfunding a star to protect this year's EBITDA is how you manufacture a question mark.</p>
+    </div>
+    <div style="grid-column:2;grid-row:2;padding:28px 32px;display:flex;flex-direction:column;gap:12px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.16)">
+      <div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.45)">Low growth · low share</div>
+      <div style="font-family:'Newsreader',serif;font-size:52px;line-height:1.0">Dogs</div>
+      <p style="font-size:24px;line-height:1.45;margin:0;color:rgba(38,26,32,0.75)">Harvest, sunset or sell. Turnarounds here almost always cost more than the revenue they defend.</p>
+    </div>
+    <div style="grid-column:3;grid-row:2;padding:28px 32px;display:flex;flex-direction:column;gap:12px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.16)">
+      <div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.45)">Low growth · high share</div>
+      <div style="font-family:'Newsreader',serif;font-size:52px;line-height:1.0">Cash Cows</div>
+      <p style="font-size:24px;line-height:1.45;margin:0;color:rgba(38,26,32,0.75)">Defend, automate, extract. This is what funds everything above it. Do not add headcount here.</p>
+    </div>
+    <div style="grid-column:2;grid-row:3;display:flex;align-items:center;justify-content:center;font-family:'SUSE Mono',monospace;font-size:24px;letter-spacing:0.04em;color:rgba(38,26,32,0.5)">&lt; 1.0× relative share</div>
+    <div style="grid-column:3;grid-row:3;display:flex;align-items:center;justify-content:center;font-family:'SUSE Mono',monospace;font-size:24px;letter-spacing:0.04em;color:oklch(0.44 0.11 233)">&gt; 1.0× relative share</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>05 / 28</span></div>
+</section>
+
+<section data-label="BCG · In detail" data-screen-label="03b" data-speaker-notes="Henderson 1970, built on the experience curve. In software the cost advantage comes from distribution and platform reuse, not volume." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:60px 96px 44px;display:flex;flex-direction:column;gap:30px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:grid;grid-template-columns:11px 11px;grid-template-rows:11px 11px;gap:3px;flex:none;justify-content:center;align-content:center"><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">BCG Growth–Share · In detail</div></div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Where Growth–Share came from, and how to build one</h2>
+    </div>
+    <p style="font-size:24px;line-height:1.4;color:rgba(38,26,32,0.6);max-width:620px;margin:0">Bruce Henderson, Boston Consulting Group, 1970.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:grid;grid-template-columns:1fr 1.05fr 1fr;gap:34px">
+    <div style="display:flex;flex-direction:column;gap:16px;padding-right:34px;border-right:1px solid rgba(38,26,32,0.16)">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">Where it came from</div>
+      <h3 style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05;margin:0">Cash is the scarce resource</h3>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">Henderson built the matrix on the experience curve: cumulative production volume lowers unit cost, so market share converts into margin. A portfolio should therefore be self-funding. The products with cost advantage in slow markets pay for the products fighting for position in fast ones.</p>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">The unit of analysis is a revenue-generating product in a defined segment, and the currency is cash rather than revenue or headcount.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;padding-right:34px;border-right:1px solid rgba(38,26,32,0.16)">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">How to run it</div>
+      <h3 style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05;margin:0">Five steps</h3>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">01</span><span>Define the segment in writing, including who the largest competitor is.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">02</span><span>Relative share = your revenue ÷ largest competitor's revenue in that segment.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">03</span><span>Segment growth = YoY growth of the segment, not of your product.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">04</span><span>Plot each product, bubble size = ARR, so scale is visible.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">05</span><span>Apply the cutoffs (10% growth, 1.0× share) and read the quadrant.</span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">How to read it</div>
+      <h3 style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05;margin:0">Watch the direction of cash</h3>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">The output is a direction of cash: cows fund stars and a small number of question marks; question marks are options with an expiry date; dogs release capacity rather than earn it.</p>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">The software caveat: share buys cost advantage through distribution, data and platform reuse rather than manufacturing volume. Net revenue retention and gross margin are the better local proxies for "cow", and a product with 0.3× share can still be structurally advantaged if it owns the workflow.</p>
+    </div></div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>06 / 28</span></div>
+</section>
+
+<section data-label="BCG · Applied" data-screen-label="04" data-speaker-notes="Arclight: one fictional portfolio used across all four frameworks so the reader can compare verdicts." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:64px 96px 48px;display:flex;flex-direction:column;gap:26px">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:grid;grid-template-columns:11px 11px;grid-template-rows:11px 11px;gap:3px;flex:none;justify-content:center;align-content:center"><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">BCG Growth–Share · Applied</div></div>
+    <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Arclight, a five-product SaaS portfolio</h2>
+  </div>
+  <div style="flex:1;display:grid;grid-template-columns:1.35fr 1fr;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:0;font-family:'SUSE Mono',monospace">
+      <div style="display:grid;grid-template-columns:2.05fr 0.7fr 0.7fr 0.7fr 1.5fr;gap:16px;padding:14px 0;border-bottom:2px solid rgba(38,26,32,0.5);font-size:24px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(38,26,32,0.55)"><span>Product</span><span>ARR</span><span>Growth</span><span>Share</span><span>Verdict</span></div>
+      <div style="display:grid;grid-template-columns:2.05fr 0.7fr 0.7fr 0.7fr 1.5fr;gap:16px;padding:20px 0;border-bottom:1px solid rgba(38,26,32,0.14);font-size:25px"><span style="display:flex;align-items:center;gap:12px"><span style="width:15px;height:15px;background:#2A1D24;display:inline-block;flex:none"></span><span>Core Platform</span></span><span>$74M</span><span>4%</span><span>2.1×</span><span style="color:oklch(0.44 0.11 233)">Cash Cow</span></div>
+      <div style="display:grid;grid-template-columns:2.05fr 0.7fr 0.7fr 0.7fr 1.5fr;gap:16px;padding:20px 0;border-bottom:1px solid rgba(38,26,32,0.14);font-size:25px"><span style="display:flex;align-items:center;gap:12px"><span style="width:15px;height:15px;border-radius:50%;background:#087CA7;display:inline-block;flex:none"></span><span>Flow (automation)</span></span><span>$21M</span><span>63%</span><span>1.4×</span><span style="color:oklch(0.44 0.11 233)">Star</span></div>
+      <div style="display:grid;grid-template-columns:2.05fr 0.7fr 0.7fr 0.7fr 1.5fr;gap:16px;padding:20px 0;border-bottom:1px solid rgba(38,26,32,0.14);font-size:25px"><span style="display:flex;align-items:center;gap:12px"><span style="width:12px;height:12px;background:#087CA7;transform:rotate(45deg);display:inline-block;flex:none"></span><span>Insights (BI add-on)</span></span><span>$9M</span><span>38%</span><span>0.3×</span><span style="color:oklch(0.44 0.11 233)">Question Mark</span></div>
+      <div style="display:grid;grid-template-columns:2.05fr 0.7fr 0.7fr 0.7fr 1.5fr;gap:16px;padding:20px 0;border-bottom:1px solid rgba(38,26,32,0.14);font-size:25px"><span style="display:flex;align-items:center;gap:12px"><span style="width:14px;height:14px;border-radius:50%;border:3px solid #087CA7;display:inline-block;flex:none"></span><span>Agent (AI beta)</span></span><span>$1M</span><span>—</span><span>0.1×</span><span style="color:oklch(0.44 0.11 233)">Question Mark</span></div>
+      <div style="display:grid;grid-template-columns:2.05fr 0.7fr 0.7fr 0.7fr 1.5fr;gap:16px;padding:20px 0;border-bottom:1px solid rgba(38,26,32,0.14);font-size:25px"><span style="display:flex;align-items:center;gap:12px"><span style="width:16px;height:5px;background:rgba(38,26,32,0.45);display:inline-block;flex:none"></span><span>Field (mobile)</span></span><span>$6M</span><span>-7%</span><span>0.4×</span><span style="color:oklch(0.44 0.11 233)">Dog</span></div>
+      <p style="font-size:24px;line-height:1.5;color:rgba(38,26,32,0.55);margin:18px 0 0">Share here is relative to the largest competitor in each segment, rather than total market share.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:#087CA7">The reallocation rules</div>
+      <div style="padding:24px 28px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'Newsreader',serif;font-size:38px;line-height:1.1">Send the cash upward</div>
+        <p style="font-size:24px;line-height:1.45;margin:0;color:rgba(38,26,32,0.72)">Core Platform's cash goes to Flow until Flow's growth drops below 25%.</p>
+      </div>
+      <div style="padding:24px 28px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'Newsreader',serif;font-size:38px;line-height:1.1">Two question marks, one survives</div>
+        <p style="font-size:24px;line-height:1.45;margin:0;color:rgba(38,26,32,0.72)">Insights and Agent get 12 months and a 0.8× share gate. Whichever misses it is folded into Flow.</p>
+      </div>
+      <div style="padding:24px 28px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'Newsreader',serif;font-size:38px;line-height:1.1">Dogs get a date</div>
+        <p style="font-size:24px;line-height:1.45;margin:0;color:rgba(38,26,32,0.72)">Field enters maintenance now, sunset announced at renewal. Its six engineers move to Flow.</p>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>07 / 28</span></div>
+</section>
+
+<section data-label="BCG · Pitfalls" data-screen-label="05" data-speaker-notes="The share proxy problem is the one that kills software applications of BCG." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:64px 96px 48px;display:flex;flex-direction:column;gap:24px">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:grid;grid-template-columns:11px 11px;grid-template-rows:11px 11px;gap:3px;flex:none;justify-content:center;align-content:center"><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">BCG Growth–Share · Where it breaks</div></div>
+    <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Three ways this matrix lies to you</h2>
+  </div>
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:28px">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+      <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Newsreader',serif;font-size:58px;line-height:0.9;color:#087CA7">01</div>
+        <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.1;min-height:100px">Market share is a guess</div>
+        <p style="font-size:25px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(38,26,32,0.12);color:rgba(38,26,32,0.72)">In software, segment boundaries are drawn by whoever wants the budget. Define the segment before you measure share, and write the definition down.</p>
+      </div>
+      <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Newsreader',serif;font-size:58px;line-height:0.9;color:#087CA7">02</div>
+        <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.1;min-height:100px">It ignores what products share</div>
+        <p style="font-size:25px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(38,26,32,0.12);color:rgba(38,26,32,0.72)">A dog that carries your identity layer, your data model or your enterprise contracts is not a dog. Score dependencies separately.</p>
+      </div>
+      <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Newsreader',serif;font-size:58px;line-height:0.9;color:#087CA7">03</div>
+        <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.1;min-height:100px">Blind to option value</div>
+        <p style="font-size:25px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(38,26,32,0.12);color:rgba(38,26,32,0.72)">The matrix has no opinion on option value. Early bets that could reset the category always look like question marks worth killing.</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+      <div style="padding:24px 30px;background:#DCE8EC;display:flex;flex-direction:column;gap:6px"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(0.44 0.11 233)">Use it when</div><p style="font-size:26px;line-height:1.4;margin:0">You have four or more revenue-generating products and a capacity fight to settle.</p></div>
+      <div style="padding:24px 30px;background:#EBE6D8;display:flex;flex-direction:column;gap:6px"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.5)">Don't</div><p style="font-size:26px;line-height:1.4;margin:0">Single-product companies, pre-revenue bets, or anything you'd defend on strategic-option grounds.</p></div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>08 / 28</span></div>
+</section>
+
+<section data-label="Ambition · Matrix" data-screen-label="09" data-speaker-notes="Nagji and Tuff, 2012. A band rather than a fixed ratio; returns run roughly inverse." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:64px 96px 48px;display:flex;flex-direction:column;gap:24px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;flex:none"><span style="width:22px;height:22px;box-sizing:border-box;border:2px solid rgba(38,26,32,0.3);display:flex;align-items:center;justify-content:center"><span style="width:13px;height:13px;box-sizing:border-box;border:2px solid #087CA7;display:flex;align-items:center;justify-content:center"><span style="width:4px;height:4px;background:#087CA7;display:block"></span></span></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Innovation Ambition</div></div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Innovation Ambition Matrix</h2>
+    </div>
+    <p style="font-size:26px;line-height:1.4;color:rgba(38,26,32,0.7);max-width:700px;margin:0">Distance from today's products and today's customers. Nagji and Tuff's 2012 average was 70/20/10; their own sector split put technology firms nearer 45/40/15. For software the defensible band is wider.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:grid;grid-template-columns:64px 1fr 1fr 1fr;grid-template-rows:1fr 1fr 1fr 56px">
+    <div style="grid-row:1 / span 3;writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;justify-content:center;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(38,26,32,0.5)">Where to play · new markets →</div>
+    <div style="padding:22px 24px;background:#EFEADC;border:1px solid rgba(38,26,32,0.12)"></div>
+    <div style="padding:22px 24px;background:#DCE8EC;border:1px solid rgba(38,26,32,0.12)"></div>
+    <div style="padding:18px 24px;background:#C3DAE2;border:1px solid #087CA7;display:flex;flex-direction:column;gap:8px"><div style="font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.44 0.11 233)">10–15% of spend</div><div style="font-family:'Newsreader',serif;font-size:40px;line-height:1.0">Transformational</div><p style="font-size:24px;line-height:1.35;margin:0">New product, new customer. Run it outside the roadmap with its own gates.</p></div>
+    <div style="padding:22px 24px;background:#DCE8EC;border:1px solid rgba(38,26,32,0.12)"></div>
+    <div style="padding:18px 24px;background:#DCE8EC;border:1px solid #087CA7;display:flex;flex-direction:column;gap:8px"><div style="font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.44 0.11 233)">20–40% of spend</div><div style="font-family:'Newsreader',serif;font-size:40px;line-height:1.0">Adjacent</div><p style="font-size:24px;line-height:1.35;margin:0">One step out: new segment for a known product, or a new product for known customers.</p></div>
+    <div style="padding:22px 24px;background:#DCE8EC;border:1px solid rgba(38,26,32,0.12)"></div>
+    <div style="padding:18px 24px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.3);display:flex;flex-direction:column;gap:8px"><div style="font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(38,26,32,0.45)">50–70% of spend</div><div style="font-family:'Newsreader',serif;font-size:40px;line-height:1.0">Core</div><p style="font-size:24px;line-height:1.35;margin:0">Existing products, existing customers. Where retention and margin are made.</p></div>
+    <div style="padding:22px 24px;background:#EFEADC;border:1px solid rgba(38,26,32,0.12)"></div>
+    <div style="padding:22px 24px;background:#EFEADC;border:1px solid rgba(38,26,32,0.12)"></div>
+    <div style="grid-column:2 / span 3;display:flex;align-items:center;justify-content:center;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(38,26,32,0.5)">How to win · new products and assets →</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>09 / 28</span></div>
+</section>
+
+<section data-label="Ambition · In detail" data-screen-label="09b" data-speaker-notes="Nagji and Tuff, HBR 2012. An observed average rather than a target." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:60px 96px 44px;display:flex;flex-direction:column;gap:30px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;flex:none"><span style="width:22px;height:22px;box-sizing:border-box;border:2px solid rgba(38,26,32,0.3);display:flex;align-items:center;justify-content:center"><span style="width:13px;height:13px;box-sizing:border-box;border:2px solid #087CA7;display:flex;align-items:center;justify-content:center"><span style="width:4px;height:4px;background:#087CA7;display:block"></span></span></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Innovation Ambition · In detail</div></div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">What the ambition split is actually claiming</h2>
+    </div>
+    <p style="font-size:24px;line-height:1.4;color:rgba(38,26,32,0.6);max-width:620px;margin:0">Bansi Nagji and Geoff Tuff, Harvard Business Review, 2012.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:grid;grid-template-columns:1fr 1.05fr 1fr;gap:34px">
+    <div style="display:flex;flex-direction:column;gap:16px;padding-right:34px;border-right:1px solid rgba(38,26,32,0.16)">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">Where it came from</div>
+      <h3 style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05;margin:0">Ambition levels need different rules</h3>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">Innovation fails as a budget line because core work and distant bets compete for the same money under the same metrics, and the core always wins, because its returns are nearer and better evidenced.</p>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">Nagji and Tuff's fix is to classify every investment by its distance from today's products and today's customers, then govern each band differently: different funding gates, different metrics, different tolerance for failure.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;padding-right:34px;border-right:1px solid rgba(38,26,32,0.16)">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">How to run it</div>
+      <h3 style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05;margin:0">Five steps</h3>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">01</span><span>List every funded investment, including the ones nobody calls innovation.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">02</span><span>Classify each on both axes: how new is the customer, how new is the product or asset.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">03</span><span>Sum actual spend per band. Engineers, not intentions.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">04</span><span>Compare the real split against your stated ratio.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">05</span><span>Set metrics per band and a gate per band, then ring-fence the teams.</span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">How to read it</div>
+      <h3 style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05;margin:0">The gap is the finding</h3>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">The output is an allocation and, more usefully, the distance between the allocation you announced and the one your timesheets describe. Most portfolios discover they are running 90/10/0.</p>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">The 2012 study found 70/20/10 among outperformers, with a roughly inverted return profile. Treat it as a benchmark. Technology firms in that same study sat nearer 45/40/15. Mature category under attack: push transformational up. Fast-growing core with real retention: 80/15/5 is defensible.</p>
+    </div></div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>10 / 28</span></div>
+</section>
+
+<section data-label="Ambition · Applied" data-screen-label="10" data-speaker-notes="Treat the ratio as a starting hypothesis. Shift it with market maturity." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:64px 96px 48px;display:flex;flex-direction:column;gap:26px">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;flex:none"><span style="width:22px;height:22px;box-sizing:border-box;border:2px solid rgba(38,26,32,0.3);display:flex;align-items:center;justify-content:center"><span style="width:13px;height:13px;box-sizing:border-box;border:2px solid #087CA7;display:flex;align-items:center;justify-content:center"><span style="width:4px;height:4px;background:#087CA7;display:block"></span></span></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Innovation Ambition · Applied</div></div>
+    <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Arclight's engineering budget, split three ways</h2>
+  </div>
+  <div style="flex:1;display:grid;grid-template-columns:1.2fr 1fr;gap:44px">
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <div style="flex:1;display:flex;flex-direction:column;gap:12px;justify-content:center">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:28px;font-weight:500;display:flex;align-items:center;gap:12px"><span style="display:flex;align-items:center;gap:6px"><span style="width:15px;height:15px;background:#2A1D24;display:inline-block;flex:none"></span><span style="width:15px;height:15px;border-radius:50%;background:#087CA7;display:inline-block;flex:none"></span></span>Core · Platform + Flow reliability</span><span style="font-family:'SUSE Mono',monospace;font-size:28px">64%</span></div>
+        <div style="height:48px;background:#EBE6D8"><div style="width:64%;height:100%;background:#087CA7"></div></div>
+        <p style="font-size:24px;line-height:1.4;margin:0;color:rgba(38,26,32,0.65)">142 of 220 engineers. Retention work, migration debt, enterprise controls.</p>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:12px;justify-content:center">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:28px;font-weight:500;display:flex;align-items:center;gap:12px"><span style="display:flex;align-items:center;gap:6px"><span style="width:15px;height:15px;border-radius:50%;background:#087CA7;display:inline-block;flex:none"></span><span style="width:12px;height:12px;background:#087CA7;transform:rotate(45deg);display:inline-block;flex:none"></span></span>Adjacent · Flow for mid-market, Insights</span><span style="font-family:'SUSE Mono',monospace;font-size:28px">27%</span></div>
+        <div style="height:48px;background:#EBE6D8"><div style="width:27%;height:100%;background:oklch(0.62 0.09 233)"></div></div>
+        <p style="font-size:24px;line-height:1.4;margin:0;color:rgba(38,26,32,0.65)">59 engineers. Same product, new segment; new product, same buyer.</p>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:12px;justify-content:center">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:28px;font-weight:500;display:flex;align-items:center;gap:12px"><span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:14px;border-radius:50%;border:3px solid #087CA7;display:inline-block;flex:none"></span></span>Transformational · Agent</span><span style="font-family:'SUSE Mono',monospace;font-size:28px">9%</span></div>
+        <div style="height:48px;background:#EBE6D8"><div style="width:9%;height:100%;background:oklch(0.74 0.07 233)"></div></div>
+        <p style="font-size:24px;line-height:1.4;margin:0;color:rgba(38,26,32,0.65)">19 engineers, separate P&amp;L, milestone funding, no roadmap obligations. Deliberately below the band, and the reason is on the record.</p>
+      </div>
+      <div style="padding:20px 26px;background:#DCE8EC;font-size:24px;line-height:1.4">The drift check: at the last review, 18 of the 19 Agent engineers were still on Agent. That number is the only real evidence the split exists.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:#087CA7">Rules that make the split real</div>
+      <div style="padding:24px 28px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:8px"><div style="font-family:'Newsreader',serif;font-size:36px;line-height:1.1">Separate the funding gates</div><p style="font-size:24px;line-height:1.4;margin:0;color:rgba(38,26,32,0.72)">Core is annual and headcount-based. Transformational is milestone-based and can be stopped mid-quarter.</p></div>
+      <div style="padding:24px 28px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:8px"><div style="font-family:'Newsreader',serif;font-size:36px;line-height:1.1">Different metrics per band</div><p style="font-size:24px;line-height:1.4;margin:0;color:rgba(38,26,32,0.72)">Core is judged on NRR and margin. Transformational is judged on learning velocity and evidence, not revenue.</p></div>
+      <div style="padding:24px 28px;background:#DCE8EC;display:flex;flex-direction:column;gap:8px"><div style="font-family:'Newsreader',serif;font-size:36px;line-height:1.1">Shift the ratio deliberately</div><p style="font-size:24px;line-height:1.4;margin:0;color:rgba(38,26,32,0.72)">Mature category under attack: push to 50/30/20. Fast-growing core: 80/15/5 is defensible. Name the number and the reason.</p></div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>11 / 28</span></div>
+</section>
+
+<section data-label="Ambition · Pitfalls" data-screen-label="11" data-speaker-notes="Most transformational bets die of governance rather than of being wrong." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:64px 96px 48px;display:flex;flex-direction:column;gap:24px">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;flex:none"><span style="width:22px;height:22px;box-sizing:border-box;border:2px solid rgba(38,26,32,0.3);display:flex;align-items:center;justify-content:center"><span style="width:13px;height:13px;box-sizing:border-box;border:2px solid #087CA7;display:flex;align-items:center;justify-content:center"><span style="width:4px;height:4px;background:#087CA7;display:block"></span></span></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Innovation Ambition · Where it breaks</div></div>
+    <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Governance kills the transformational band</h2>
+  </div>
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:28px">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+      <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Newsreader',serif;font-size:58px;line-height:0.9;color:#087CA7">01</div>
+        <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.1;min-height:100px">The split becomes a slogan</div>
+        <p style="font-size:25px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(38,26,32,0.12);color:rgba(38,26,32,0.72)">Announced in January, quietly 95/5/0 by March as core incidents pull people back. Ring-fence the teams or drop the claim.</p>
+      </div>
+      <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Newsreader',serif;font-size:58px;line-height:0.9;color:#087CA7">02</div>
+        <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.1;min-height:100px">Relabelling instead of reallocating</div>
+        <p style="font-size:25px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(38,26,32,0.12);color:rgba(38,26,32,0.72)">Core roadmap items get renamed "transformational" to look ambitious. Test it: would this ship to a customer you have today?</p>
+      </div>
+      <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Newsreader',serif;font-size:58px;line-height:0.9;color:#087CA7">03</div>
+        <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.1;min-height:100px">Core work looks unglamorous</div>
+        <p style="font-size:25px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(38,26,32,0.12);color:rgba(38,26,32,0.72)">The core band is where the money is. Staff it with your strongest people, or the funding for everything else disappears.</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+      <div style="padding:24px 30px;background:#DCE8EC;display:flex;flex-direction:column;gap:6px"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(0.44 0.11 233)">Use it when</div><p style="font-size:26px;line-height:1.4;margin:0">Setting an annual budget, or explaining why a bet gets funded on different terms.</p></div>
+      <div style="padding:24px 30px;background:#EBE6D8;display:flex;flex-direction:column;gap:6px"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.5)">Don't</div><p style="font-size:26px;line-height:1.4;margin:0">Use it to rank individual features. It works on portfolios of investment, not backlogs.</p></div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>12 / 28</span></div>
+</section>
+
+<section data-label="Ansoff · Matrix" data-screen-label="12" data-speaker-notes="Ansoff's rough rule of thumb: each step away from the known roughly doubles the risk." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:64px 96px 48px;display:flex;flex-direction:column;gap:24px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:grid;grid-template-columns:11px 11px;grid-template-rows:11px 11px;gap:3px;flex:none;justify-content:center;align-content:center"><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Ansoff Growth Matrix</div></div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Ansoff Growth Matrix</h2>
+    </div>
+    <p style="font-size:26px;line-height:1.4;color:rgba(38,26,32,0.7);max-width:620px;margin:0">Four growth moves. The risk multipliers are the useful part.</p>
+  </div>
+  <div style="flex:1;display:grid;grid-template-columns:64px 1fr 1fr;grid-template-rows:1fr 1fr 60px">
+    <div style="grid-row:1 / span 2;writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;justify-content:center;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(38,26,32,0.5)">Markets · existing → new</div>
+    <div style="padding:28px 32px;display:flex;flex-direction:column;gap:12px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.16)">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.45)">New market · existing product</div><div style="font-family:'SUSE Mono',monospace;font-size:26px;color:oklch(0.44 0.11 233)">4× risk</div></div>
+      <div style="font-family:'Newsreader',serif;font-size:52px;line-height:1.0">Market development</div>
+      <p style="font-size:24px;line-height:1.45;margin:0;color:rgba(38,26,32,0.75)">New geography, new segment, new channel. Cheapest real growth if the product genuinely transfers.</p>
+    </div>
+    <div style="padding:28px 32px;display:flex;flex-direction:column;gap:12px;background:#EFEADC;border:1px solid rgba(38,26,32,0.16)">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.45)">New market · new product</div><div style="font-family:'SUSE Mono',monospace;font-size:26px;color:oklch(0.44 0.11 233)">8× risk</div></div>
+      <div style="font-family:'Newsreader',serif;font-size:52px;line-height:1.0">Diversification</div>
+      <p style="font-size:24px;line-height:1.45;margin:0;color:rgba(38,26,32,0.75)">Two unknowns at once. Justified only by a real asset advantage, or when the core is structurally dying.</p>
+    </div>
+    <div style="padding:28px 32px;display:flex;flex-direction:column;gap:12px;background:#DCE8EC;border:1px solid #087CA7">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(0.44 0.11 233)">Existing market · existing product</div><div style="font-family:'SUSE Mono',monospace;font-size:26px;color:oklch(0.44 0.11 233)">1× risk</div></div>
+      <div style="font-family:'Newsreader',serif;font-size:52px;line-height:1.0">Market penetration</div>
+      <p style="font-size:24px;line-height:1.45;margin:0;color:rgba(38,26,32,0.8)">Pricing, packaging, activation, win rate. Exhaust this before anything else on the board.</p>
+    </div>
+    <div style="padding:28px 32px;display:flex;flex-direction:column;gap:12px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.16)">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.45)">Existing market · new product</div><div style="font-family:'SUSE Mono',monospace;font-size:26px;color:oklch(0.44 0.11 233)">2× risk</div></div>
+      <div style="font-family:'Newsreader',serif;font-size:52px;line-height:1.0">Product development</div>
+      <p style="font-size:24px;line-height:1.45;margin:0;color:rgba(38,26,32,0.75)">Sell more to buyers you already have. Fastest compounding move in most SaaS portfolios.</p>
+    </div>
+    <div style="grid-column:2 / span 2;display:flex;align-items:center;justify-content:center;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(38,26,32,0.5)">Products · existing → new</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>13 / 28</span></div>
+</section>
+
+<section data-label="Ansoff · In detail" data-screen-label="12b" data-speaker-notes="Ansoff 1957. Classification plus hurdle rate; the multipliers are heuristics." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:60px 96px 44px;display:flex;flex-direction:column;gap:30px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:grid;grid-template-columns:11px 11px;grid-template-rows:11px 11px;gap:3px;flex:none;justify-content:center;align-content:center"><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Ansoff Growth Matrix · In detail</div></div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">The oldest of the five, and the simplest to abuse</h2>
+    </div>
+    <p style="font-size:24px;line-height:1.4;color:rgba(38,26,32,0.6);max-width:620px;margin:0">Igor Ansoff, “Strategies for Diversification”, Harvard Business Review, 1957.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:grid;grid-template-columns:1fr 1.05fr 1fr;gap:34px">
+    <div style="display:flex;flex-direction:column;gap:16px;padding-right:34px;border-right:1px solid rgba(38,26,32,0.16)">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">Where it came from</div>
+      <h3 style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05;margin:0">Growth has only four directions</h3>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">Ansoff's argument was that any growth initiative is some combination of product novelty and market novelty, and that each kind of novelty introduces its own class of unknown: a technical one, a demand one, or both at once.</p>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">The value is in naming which unknowns you have taken on, so two initiatives asking for the same money can be compared on more than their forecast.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;padding-right:34px;border-right:1px solid rgba(38,26,32,0.16)">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">How to run it</div>
+      <h3 style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05;margin:0">Five steps</h3>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">01</span><span>State the initiative as one sentence: sell X to Y.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">02</span><span>Classify X and Y as existing or new using the buyer test. A different buyer or a different budget line means new.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">03</span><span>Assign the risk multiplier: penetration 1×, product development 2×, market development 4×, diversification 8×.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">04</span><span>Require the expected return to clear that multiplier, not a flat hurdle rate.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">05</span><span>Sequence the cheapest unknowns first, and hold the 8× move as an option.</span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">How to read it</div>
+      <h3 style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05;margin:0">Use it to set the bar</h3>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">Used well, Ansoff is a sequencing tool: it forces penetration work to be exhausted before new products are funded, and it prices diversification honestly against the alternatives.</p>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">The multipliers are heuristics, widely quoted and not empirically derived. Their job is discipline. A diversification bet has to clear a visibly higher bar than a pricing project of the same size. Treat them as a ratio between options, never as an expected loss.</p>
+    </div></div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>14 / 28</span></div>
+</section>
+
+<section data-label="Ansoff · Applied" data-screen-label="13" data-speaker-notes="Sequencing is the point: penetration this year, development next, development after." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:64px 96px 48px;display:flex;flex-direction:column;gap:26px">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:grid;grid-template-columns:11px 11px;grid-template-rows:11px 11px;gap:3px;flex:none;justify-content:center;align-content:center"><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Ansoff Growth Matrix · Applied</div></div>
+    <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Sequencing Arclight's next $40M</h2>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;gap:22px">
+    <div style="display:grid;grid-template-columns:120px 1fr 1.4fr 240px;gap:28px;align-items:center;padding:26px 30px;background:#DCE8EC">
+      <div style="font-family:'SUSE Mono',monospace;font-size:26px;color:oklch(0.44 0.11 233);display:flex;align-items:center;gap:12px"><span style="width:15px;height:15px;border-radius:50%;background:#087CA7;display:inline-block;flex:none"></span><span>Q1–Q2</span></div>
+      <div style="font-family:'Newsreader',serif;font-size:40px;line-height:1.1">Penetration</div>
+      <p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.75)">Re-price Flow by usage tier, fix trial-to-paid activation, close the win-rate gap on two named competitors.</p>
+      <div style="font-family:'SUSE Mono',monospace;font-size:25px;text-align:right;white-space:nowrap">$6M · 1× risk</div>
+    </div>
+    <div style="display:grid;grid-template-columns:120px 1fr 1.4fr 240px;gap:28px;align-items:center;padding:26px 30px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)">
+      <div style="font-family:'SUSE Mono',monospace;font-size:26px;color:oklch(0.44 0.11 233);display:flex;align-items:center;gap:12px"><span style="width:12px;height:12px;background:#087CA7;transform:rotate(45deg);display:inline-block;flex:none"></span><span>Q2–Q4</span></div>
+      <div style="font-family:'Newsreader',serif;font-size:40px;line-height:1.1">Product development</div>
+      <p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.75)">Ship Insights as a paid module to the installed base. Known buyer, known problem, new SKU.</p>
+      <div style="font-family:'SUSE Mono',monospace;font-size:25px;text-align:right;white-space:nowrap">$14M · 2× risk</div>
+    </div>
+    <div style="display:grid;grid-template-columns:120px 1fr 1.4fr 240px;gap:28px;align-items:center;padding:26px 30px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)">
+      <div style="font-family:'SUSE Mono',monospace;font-size:26px;color:oklch(0.44 0.11 233);display:flex;align-items:center;gap:12px"><span style="width:15px;height:15px;border-radius:50%;background:#087CA7;display:inline-block;flex:none"></span><span>Q3–Q4+</span></div>
+      <div style="font-family:'Newsreader',serif;font-size:40px;line-height:1.1">Market development</div>
+      <p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.75)">Take Flow into mid-market through partners. Same product, new buying process, new pricing floor.</p>
+      <div style="font-family:'SUSE Mono',monospace;font-size:25px;text-align:right;white-space:nowrap">$15M · 4× risk</div>
+    </div>
+    <div style="display:grid;grid-template-columns:120px 1fr 1.4fr 240px;gap:28px;align-items:center;padding:26px 30px;background:#EFEADC;border:1px solid rgba(38,26,32,0.14)">
+      <div style="font-family:'SUSE Mono',monospace;font-size:26px;color:oklch(0.44 0.11 233);display:flex;align-items:center;gap:12px"><span style="width:14px;height:14px;border-radius:50%;border:3px solid #087CA7;display:inline-block;flex:none"></span><span>Optioned</span></div>
+      <div style="font-family:'Newsreader',serif;font-size:40px;line-height:1.1">Diversification</div>
+      <p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.75)">Agent for a market Arclight does not serve. Held at $5M and milestone-gated, not scaled.</p>
+      <div style="font-family:'SUSE Mono',monospace;font-size:25px;text-align:right;white-space:nowrap">$5M · 8× risk</div>
+    </div>
+  </div>
+  <div style="padding:22px 30px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);font-size:26px;line-height:1.4">The multipliers are not precise. They exist so a $5M diversification bet has to clear a far higher bar than a $5M pricing project.</div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>15 / 28</span></div>
+</section>
+
+<section data-label="Ansoff · Pitfalls" data-screen-label="14" data-speaker-notes="Ansoff names the move. It will not make the call." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:64px 96px 48px;display:flex;flex-direction:column;gap:24px">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:grid;grid-template-columns:11px 11px;grid-template-rows:11px 11px;gap:3px;flex:none;justify-content:center;align-content:center"><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Ansoff Growth Matrix · Where it breaks</div></div>
+    <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">It names the move. It will not make the call</h2>
+  </div>
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:28px">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+      <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Newsreader',serif;font-size:58px;line-height:0.9;color:#087CA7">01</div>
+        <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.1;min-height:100px">"New" is doing a lot of work</div>
+        <p style="font-size:25px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(38,26,32,0.12);color:rgba(38,26,32,0.72)">A new tier for existing buyers is not a new product. Define new as a different buyer or a different budget line.</p>
+      </div>
+      <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Newsreader',serif;font-size:58px;line-height:0.9;color:#087CA7">02</div>
+        <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.1;min-height:100px">Nothing about capacity</div>
+        <p style="font-size:25px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(38,26,32,0.12);color:rgba(38,26,32,0.72)">The matrix will happily suggest four moves you cannot staff. Pair every quadrant with a named team, or it is a wish list.</p>
+      </div>
+      <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Newsreader',serif;font-size:58px;line-height:0.9;color:#087CA7">03</div>
+        <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.1;min-height:100px">Penetration gets skipped</div>
+        <p style="font-size:25px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(38,26,32,0.12);color:rgba(38,26,32,0.72)">It is the least exciting box and usually the highest return. Most portfolios have a pricing or activation project worth more than their next new product.</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+      <div style="padding:24px 30px;background:#DCE8EC;display:flex;flex-direction:column;gap:6px"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(0.44 0.11 233)">Use it when</div><p style="font-size:26px;line-height:1.4;margin:0">Sequencing growth initiatives and pricing their risk against each other.</p></div>
+      <div style="padding:24px 30px;background:#EBE6D8;display:flex;flex-direction:column;gap:6px"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.5)">Don't</div><p style="font-size:26px;line-height:1.4;margin:0">Treat it as a portfolio review. It says nothing about what to stop doing.</p></div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>16 / 28</span></div>
+</section>
+
+<section data-label="Wardley · Map" data-screen-label="Wardley · Map" data-speaker-notes="Simon Wardley. Position plus movement; doctrine follows evolution stage." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:60px 96px 44px;display:flex;flex-direction:column;gap:30px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;gap:3px;flex:none"><span style="width:8px;height:16px;background:rgba(38,26,32,0.2);display:block"></span><span style="width:8px;height:16px;background:rgba(38,26,32,0.38);display:block"></span><span style="width:8px;height:16px;background:#087CA7;display:block"></span><span style="width:8px;height:16px;background:#087CA7;display:block"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Wardley Mapping</div></div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Wardley Mapping</h2>
+    </div>
+    <p style="font-size:24px;line-height:1.4;color:rgba(38,26,32,0.62);max-width:620px;margin:0">Simon Wardley, from 2005. A value chain plotted against evolution, so you can see what to build, buy or rent.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:grid;grid-template-columns:66px 1fr 1fr 1fr 1fr;grid-template-rows:auto 1fr 56px">
+    <div></div>
+    <div style="padding:12px 20px;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(38,26,32,0.5);border-bottom:1px solid rgba(38,26,32,0.2)">I · Genesis</div>
+    <div style="padding:12px 20px;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(38,26,32,0.5);border-bottom:1px solid rgba(38,26,32,0.2)">II · Custom-built</div>
+    <div style="padding:12px 20px;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(38,26,32,0.5);border-bottom:1px solid rgba(38,26,32,0.2)">III · Product</div>
+    <div style="padding:12px 20px;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(38,26,32,0.5);border-bottom:1px solid rgba(38,26,32,0.2)">IV · Commodity</div>
+    <div style="grid-row:2;writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;justify-content:center;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(38,26,32,0.5)">← Visible to the user</div>
+    <div style="padding:20px;display:flex;flex-direction:column;gap:14px;justify-content:flex-end;border-right:1px solid rgba(38,26,32,0.12)">
+      <div style="padding:16px 18px;background:#C3DAE2;border:1px solid #087CA7"><div style="font-size:25px;font-weight:500">Agent reasoning layer</div><div style="font-size:24px;color:oklch(0.44 0.11 233);margin-top:6px">Build. Nobody can sell you this yet.</div></div>
+    </div>
+    <div style="padding:20px;display:flex;flex-direction:column;gap:14px;justify-content:center;border-right:1px solid rgba(38,26,32,0.12)">
+      <div style="padding:16px 18px;background:#DCE8EC"><div style="font-size:25px;font-weight:500">Workflow orchestration</div><div style="font-size:24px;color:oklch(0.44 0.11 233);margin-top:6px">Build. This is the differentiator.</div></div>
+      <div style="padding:16px 18px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)"><div style="font-size:25px;font-weight:500">Usage metering</div><div style="font-size:24px;color:rgba(38,26,32,0.6);margin-top:6px">Moving right. Replace before it rots.</div></div>
+    </div>
+    <div style="padding:20px;display:flex;flex-direction:column;gap:14px;justify-content:center;border-right:1px solid rgba(38,26,32,0.12)">
+      <div style="padding:16px 18px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)"><div style="font-size:25px;font-weight:500">Analytics engine</div><div style="font-size:24px;color:rgba(38,26,32,0.6);margin-top:6px">Buy. Wrap it, don't write it.</div></div>
+      <div style="padding:16px 18px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)"><div style="font-size:25px;font-weight:500">Model serving</div><div style="font-size:24px;color:rgba(38,26,32,0.6);margin-top:6px">Rent. Assume price falls.</div></div>
+    </div>
+    <div style="padding:20px;display:flex;flex-direction:column;gap:14px;justify-content:flex-start">
+      <div style="padding:16px 18px;background:#EFEADC;border:1px solid rgba(38,26,32,0.14)"><div style="font-size:25px;font-weight:500">Identity and auth</div><div style="font-size:24px;color:rgba(38,26,32,0.6);margin-top:6px">Utility. Custom-built here is pure cost.</div></div>
+      <div style="padding:16px 18px;background:#EFEADC;border:1px solid rgba(38,26,32,0.14)"><div style="font-size:25px;font-weight:500">Billing, compute, storage</div><div style="font-size:24px;color:rgba(38,26,32,0.6);margin-top:6px">Utility. Outsource without sentiment.</div></div>
+    </div>
+    <div style="grid-column:2 / span 4;display:flex;align-items:center;justify-content:center;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(38,26,32,0.5);border-top:1px solid rgba(38,26,32,0.2)">Evolution · everything drifts rightward →</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>17 / 28</span></div>
+</section>
+
+<section data-label="Wardley · In detail" data-screen-label="Wardley · In detail" data-speaker-notes="In detail." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:60px 96px 44px;display:flex;flex-direction:column;gap:30px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;gap:3px;flex:none"><span style="width:8px;height:16px;background:rgba(38,26,32,0.2);display:block"></span><span style="width:8px;height:16px;background:rgba(38,26,32,0.38);display:block"></span><span style="width:8px;height:16px;background:#087CA7;display:block"></span><span style="width:8px;height:16px;background:#087CA7;display:block"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Wardley Mapping · In detail</div></div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Position, movement, and what to stop building</h2>
+    </div>
+    <p style="font-size:24px;line-height:1.4;color:rgba(38,26,32,0.62);max-width:620px;margin:0">Simon Wardley, Creative Commons, from 2005.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:grid;grid-template-columns:1fr 1.05fr 1fr;gap:34px">
+    <div style="display:flex;flex-direction:column;gap:16px;padding-right:34px;border-right:1px solid rgba(38,26,32,0.16)">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">Where it came from</div>
+      <h3 style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05;margin:0">Everything drifts toward commodity</h3>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">A map starts from a user need and chains downward through every component that need depends on. Each component is then placed on an evolution axis by its characteristics: how uncertain, how differentiating, how widely available.</p>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">The claim is that supply and demand competition pushes every component rightward over time, and that the correct practice for a component depends entirely on where it currently sits, rather than on what it was when you first built it.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;padding-right:34px;border-right:1px solid rgba(38,26,32,0.16)">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">How to run it</div>
+      <h3 style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05;margin:0">Five steps</h3>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">01</span><span>Write the user need at the top. Not a feature, a need.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">02</span><span>Chain the components beneath it until you reach things you rent.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">03</span><span>Place each component on the evolution axis: genesis, custom-built, product, or commodity.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">04</span><span>Mark the direction of travel, and mark where you have inertia: sunk cost, a team, a contract.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">05</span><span>Apply doctrine per stage: build genesis, build custom where you differentiate, buy product, rent commodity.</span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">How to read it</div>
+      <h3 style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05;margin:0">The uncomfortable column</h3>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">Two errors show up on almost every map. Custom-building something that is already a commodity, which is invisible cost. And buying something in genesis that is your actual differentiator, which is outsourced strategy.</p>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">The output is shared situational awareness rather than a priority list, and the argument about placement is where most of the value sits. Redraw it when the market moves, not on a schedule.</p>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>18 / 28</span></div>
+</section>
+
+<section data-label="Wardley · Applied" data-screen-label="Wardley · Applied" data-speaker-notes="The map produced three decisions, two of them uncomfortable." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:64px 96px 48px;display:flex;flex-direction:column;gap:30px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;gap:3px;flex:none"><span style="width:8px;height:16px;background:rgba(38,26,32,0.2);display:block"></span><span style="width:8px;height:16px;background:rgba(38,26,32,0.38);display:block"></span><span style="width:8px;height:16px;background:#087CA7;display:block"></span><span style="width:8px;height:16px;background:#087CA7;display:block"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Wardley Mapping · Applied</div></div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">What the map told Arclight to stop doing</h2>
+    </div>
+    <p style="font-size:24px;line-height:1.4;color:rgba(38,26,32,0.62);max-width:620px;margin:0"></p>
+  </div>
+  <div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+    <div style="padding:32px 34px;background:#DCE8EC;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:center;gap:12px"><span style="width:15px;height:15px;background:#2A1D24;display:inline-block;flex:none"></span><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.45)">Decision 01</div></div>
+      <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.05">Kill the in-house identity service</div>
+      <p style="font-size:25px;line-height:1.45;margin:0;color:rgba(38,26,32,0.75)">Nine years old, four engineers, zero differentiation. It sits in the commodity column and is bought by everyone else in the category. Migrate to a provider and redeploy the team to Flow.</p>
+      <p style="font-size:24px;line-height:1.4;margin:0;color:oklch(0.44 0.11 233)">Inertia: it was someone's promotion.</p>
+    </div>
+    <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:center;gap:12px"><span style="width:15px;height:15px;border-radius:50%;background:#087CA7;display:inline-block;flex:none"></span><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.45)">Decision 02</div></div>
+      <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.05">Stop shopping for a workflow engine</div>
+      <p style="font-size:25px;line-height:1.45;margin:0;color:rgba(38,26,32,0.75)">Orchestration is the one custom-built component that customers choose Arclight for. Buying it would hand the differentiator to a vendor who also sells to competitors.</p>
+      <p style="font-size:24px;line-height:1.4;margin:0;color:oklch(0.44 0.11 233)">This reverses a procurement decision already in flight.</p>
+    </div>
+    <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:center;gap:12px"><span style="width:14px;height:14px;border-radius:50%;border:3px solid #087CA7;display:inline-block;flex:none"></span><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.45)">Decision 03</div></div>
+      <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.05">Rent model serving, own the reasoning layer</div>
+      <p style="font-size:25px;line-height:1.45;margin:0;color:rgba(38,26,32,0.75)">Inference is commoditising and its price is falling; the domain reasoning on top of it is genesis and nobody sells it. Build one, rent the other, and expect to renegotiate annually.</p>
+      <p style="font-size:24px;line-height:1.4;margin:0;color:oklch(0.44 0.11 233)">Revisit when serving prices halve again.</p>
+    </div>
+  </div>
+  <div style="padding:22px 30px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);font-size:26px;line-height:1.4">None of the other frameworks in this deck would have surfaced the identity service. It has no revenue line, so it never appears as a product.</div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>19 / 28</span></div>
+</section>
+
+<section data-label="Wardley · Pitfalls" data-screen-label="Wardley · Pitfalls" data-speaker-notes="Where it breaks." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:64px 96px 48px;display:flex;flex-direction:column;gap:30px">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;gap:3px;flex:none"><span style="width:8px;height:16px;background:rgba(38,26,32,0.2);display:block"></span><span style="width:8px;height:16px;background:rgba(38,26,32,0.38);display:block"></span><span style="width:8px;height:16px;background:#087CA7;display:block"></span><span style="width:8px;height:16px;background:#087CA7;display:block"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Wardley Mapping · Where it breaks</div></div>
+    <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">A map nobody redraws is a poster</h2>
+  </div>
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:28px">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+      <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Newsreader',serif;font-size:58px;line-height:0.9;color:#087CA7">01</div>
+        <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.1;min-height:100px">Placement becomes the meeting</div>
+        <p style="font-size:25px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(38,26,32,0.12);color:rgba(38,26,32,0.72)">Teams spend two hours arguing whether something is product or commodity. Timebox it: the column matters, the exact position within it does not.</p>
+      </div>
+      <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Newsreader',serif;font-size:58px;line-height:0.9;color:#087CA7">02</div>
+        <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.1;min-height:100px">It needs a facilitator</div>
+        <p style="font-size:25px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(38,26,32,0.12);color:rgba(38,26,32,0.72)">Unlike a 2×2, a map is hard to produce well on a first attempt. Expect the first two to be wrong and treat them as practice.</p>
+      </div>
+      <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Newsreader',serif;font-size:58px;line-height:0.9;color:#087CA7">03</div>
+        <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.1;min-height:100px">It will not prioritise for you</div>
+        <p style="font-size:25px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(38,26,32,0.12);color:rgba(38,26,32,0.72)">A map tells you what to build, buy or rent. It will not rank your initiatives or size your bets, so pair it with something that does.</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+      <div style="padding:24px 30px;background:#DCE8EC;display:flex;flex-direction:column;gap:6px"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(0.44 0.11 233)">Use it when</div><p style="font-size:26px;line-height:1.4;margin:0">You are deciding build versus buy, or you suspect you are custom-building commodities.</p></div>
+      <div style="padding:24px 30px;background:#EBE6D8;display:flex;flex-direction:column;gap:6px"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.5)">Don't</div><p style="font-size:26px;line-height:1.4;margin:0">You need a funding split or a ranked backlog. The map has no opinion on either.</p></div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>20 / 28</span></div>
+</section>
+
+<section data-label="Cost of Delay · Model" data-screen-label="Cost of Delay · Model" data-speaker-notes="Reinertsen. Time is the scarce resource; WSJF is the ratio." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:60px 96px 44px;display:flex;flex-direction:column;gap:30px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;gap:4px;flex:none"><span style="width:7px;height:24px;background:#087CA7;display:block"></span><span style="width:7px;height:16px;background:rgba(38,26,32,0.45);display:block"></span><span style="width:7px;height:9px;background:rgba(38,26,32,0.28);display:block"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Cost of Delay and WSJF</div></div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Cost of Delay and WSJF</h2>
+    </div>
+    <p style="font-size:24px;line-height:1.4;color:rgba(38,26,32,0.62);max-width:620px;margin:0">Donald Reinertsen, 2009. The only framework here that ranks rather than classifies.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:24px">
+    <div style="padding:34px 40px;background:#C3DAE2;border:1px solid #087CA7;display:flex;flex-direction:column;gap:16px">
+      <div style="font-family:'SUSE Mono',monospace;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.44 0.11 233)">The ratio</div>
+      <div style="font-family:'Newsreader',serif;font-size:54px;line-height:1.1">Weighted Shortest Job First = Cost of Delay ÷ Job Duration</div>
+      <p style="font-size:26px;line-height:1.4;margin:0">Cost of Delay is what one week of waiting costs you. Duration is how long the work takes. Rank by the ratio, take from the top, re-rank next cycle.</p>
+    </div>
+    <div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+      <div style="padding:28px 32px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:12px"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.45)">Component 01</div><div style="font-family:'Newsreader',serif;font-size:42px;line-height:1.05">User and business value</div><p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.75)">Revenue protected or gained per week. The only component you can sometimes state in currency.</p></div>
+      <div style="padding:28px 32px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:12px"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.45)">Component 02</div><div style="font-family:'Newsreader',serif;font-size:42px;line-height:1.05">Time criticality</div><p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.75)">Does the value decay? A renewal deadline, a competitor launch or a regulatory date all make waiting expensive.</p></div>
+      <div style="padding:28px 32px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:12px"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.45)">Component 03</div><div style="font-family:'Newsreader',serif;font-size:42px;line-height:1.05">Risk and opportunity enablement</div><p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.75)">What this unblocks or de-risks. Where platform work earns its ranking instead of pleading for it.</p></div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>21 / 28</span></div>
+</section>
+
+<section data-label="Cost of Delay · In detail" data-screen-label="Cost of Delay · In detail" data-speaker-notes="In detail." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:60px 96px 44px;display:flex;flex-direction:column;gap:30px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;gap:4px;flex:none"><span style="width:7px;height:24px;background:#087CA7;display:block"></span><span style="width:7px;height:16px;background:rgba(38,26,32,0.45);display:block"></span><span style="width:7px;height:9px;background:rgba(38,26,32,0.28);display:block"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Cost of Delay and WSJF · In detail</div></div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Queues are the cost nobody budgets</h2>
+    </div>
+    <p style="font-size:24px;line-height:1.4;color:rgba(38,26,32,0.62);max-width:620px;margin:0">Donald Reinertsen, “The Principles of Product Development Flow”, 2009.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:grid;grid-template-columns:1fr 1.05fr 1fr;gap:34px">
+    <div style="display:flex;flex-direction:column;gap:16px;padding-right:34px;border-right:1px solid rgba(38,26,32,0.16)">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">Where it came from</div>
+      <h3 style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05;margin:0">Time is the constraint</h3>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">Without a cost of delay, an organisation optimises for what it can see: utilisation, headcount efficiency, cost per feature. Queues are invisible on every dashboard, so the economic cost of work sitting still never enters a decision.</p>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">Putting a number on a week of delay changes the argument from which initiative is most important to which order costs us least. That reordering is usually free.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;padding-right:34px;border-right:1px solid rgba(38,26,32,0.16)">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">How to run it</div>
+      <h3 style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05;margin:0">Five steps</h3>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">01</span><span>Estimate cost of delay per week for each initiative. In currency if your economics allow, otherwise on a relative 1-2-3-5-8-13 scale.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">02</span><span>Estimate duration, not effort. A six-week job with two people beats a two-week job that waits a quarter for a dependency.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">03</span><span>Divide to get the ratio, and sort.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">04</span><span>Take work from the top only, and resist splitting capacity across the whole list.</span></div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:12px;font-size:24px;line-height:1.45;color:rgba(38,26,32,0.78)"><span style="font-family:'SUSE Mono',monospace;color:#087CA7">05</span><span>Re-rank every cycle. The ranking is a snapshot of economics, and economics move.</span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">How to read it</div>
+      <h3 style="font-family:'Newsreader',serif;font-size:40px;line-height:1.05;margin:0">Short and valuable first</h3>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">The counter-intuitive result is that a small, cheap, moderately valuable job frequently outranks a large, exciting, highly valuable one. That is the point of it.</p>
+      <p style="font-size:24px;line-height:1.5;margin:0;color:rgba(38,26,32,0.78)">Absolute scores mean nothing. Only the ordering does. And the ranking assumes you can actually start the top item. It says nothing about whether the right team is free, which is why it pairs with a capacity view rather than replacing one.</p>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>22 / 28</span></div>
+</section>
+
+<section data-label="CoD · Applied" data-screen-label="CoD · Applied" data-speaker-notes="Ranking Arclight initiatives. The pricing project wins." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:64px 96px 48px;display:flex;flex-direction:column;gap:30px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;gap:4px;flex:none"><span style="width:7px;height:24px;background:#087CA7;display:block"></span><span style="width:7px;height:16px;background:rgba(38,26,32,0.45);display:block"></span><span style="width:7px;height:9px;background:rgba(38,26,32,0.28);display:block"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Cost of Delay and WSJF · Applied</div></div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">The pricing project outranks the new module</h2>
+    </div>
+    <p style="font-size:24px;line-height:1.4;color:rgba(38,26,32,0.62);max-width:620px;margin:0"></p>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;font-family:'SUSE Mono',monospace">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 0.8fr 0.9fr;gap:22px;padding:16px 0;border-bottom:2px solid rgba(38,26,32,0.5);font-size:24px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(38,26,32,0.55)"><span>Initiative</span><span>CoD / week</span><span>Duration</span><span>WSJF</span><span>Rank</span></div>
+    <div style="flex:1;display:grid;grid-template-columns:2fr 1fr 1fr 0.8fr 0.9fr;gap:22px;padding:22px 0;border-bottom:1px solid rgba(38,26,32,0.14);font-size:25px;align-items:center;background:#DCE8EC"><span style="display:flex;align-items:center;gap:12px"><span style="width:15px;height:15px;border-radius:50%;background:#087CA7;display:inline-block;flex:none"></span><span>Flow usage-tier re-pricing</span></span><span>$180K</span><span>8 weeks</span><span>22.5</span><span style="color:oklch(0.44 0.11 233)">1</span></div>
+    <div style="flex:1;display:grid;grid-template-columns:2fr 1fr 1fr 0.8fr 0.9fr;gap:22px;padding:22px 0;border-bottom:1px solid rgba(38,26,32,0.14);font-size:25px;align-items:center"><span style="display:flex;align-items:center;gap:12px"><span style="width:15px;height:15px;border-radius:50%;background:#087CA7;display:inline-block;flex:none"></span><span>Trial-to-paid activation fixes</span></span><span>$95K</span><span>6 weeks</span><span>15.8</span><span style="color:oklch(0.44 0.11 233)">2</span></div>
+    <div style="flex:1;display:grid;grid-template-columns:2fr 1fr 1fr 0.8fr 0.9fr;gap:22px;padding:22px 0;border-bottom:1px solid rgba(38,26,32,0.14);font-size:25px;align-items:center"><span style="display:flex;align-items:center;gap:12px"><span style="width:15px;height:15px;background:#2A1D24;display:inline-block;flex:none"></span><span>SOC 2 controls for enterprise deals</span></span><span>$210K</span><span>16 weeks</span><span>13.1</span><span style="color:oklch(0.44 0.11 233)">3</span></div>
+    <div style="flex:1;display:grid;grid-template-columns:2fr 1fr 1fr 0.8fr 0.9fr;gap:22px;padding:22px 0;border-bottom:1px solid rgba(38,26,32,0.14);font-size:25px;align-items:center"><span style="display:flex;align-items:center;gap:12px"><span style="width:12px;height:12px;background:#087CA7;transform:rotate(45deg);display:inline-block;flex:none"></span><span>Insights paid module</span></span><span>$240K</span><span>34 weeks</span><span>7.1</span><span style="color:oklch(0.44 0.11 233)">4</span></div>
+    <div style="flex:1;display:grid;grid-template-columns:2fr 1fr 1fr 0.8fr 0.9fr;gap:22px;padding:22px 0;border-bottom:1px solid rgba(38,26,32,0.14);font-size:25px;align-items:center"><span style="display:flex;align-items:center;gap:12px"><span style="width:16px;height:5px;background:rgba(38,26,32,0.45);display:inline-block;flex:none"></span><span>Field mobile refresh</span></span><span>$20K</span><span>20 weeks</span><span>1.0</span><span style="color:oklch(0.44 0.11 233)">5</span></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+    <div style="padding:22px 30px;background:#DCE8EC;font-size:25px;line-height:1.4">Insights has the highest cost of delay on the list and still ranks fourth. Duration is doing the work, and it is the number most worth attacking.</div>
+    <div style="padding:22px 30px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);font-size:25px;line-height:1.4">Field ranks last on economics and last on the growth–share read. Two independent frameworks agreeing is the strongest signal in the deck.</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>23 / 28</span></div>
+</section>
+
+<section data-label="CoD · Pitfalls" data-screen-label="CoD · Pitfalls" data-speaker-notes="Where it breaks." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:64px 96px 48px;display:flex;flex-direction:column;gap:30px">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;gap:4px;flex:none"><span style="width:7px;height:24px;background:#087CA7;display:block"></span><span style="width:7px;height:16px;background:rgba(38,26,32,0.45);display:block"></span><span style="width:7px;height:9px;background:rgba(38,26,32,0.28);display:block"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Cost of Delay and WSJF · Where it breaks</div></div>
+    <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Numbers that only look economic</h2>
+  </div>
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:28px">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+      <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Newsreader',serif;font-size:58px;line-height:0.9;color:#087CA7">01</div>
+        <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.1;min-height:100px">Relative scales get gamed</div>
+        <p style="font-size:25px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(38,26,32,0.12);color:rgba(38,26,32,0.72)">Once teams learn that 13s win, everything becomes a 13. Calibrate against two or three reference initiatives everyone already agrees on.</p>
+      </div>
+      <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Newsreader',serif;font-size:58px;line-height:0.9;color:#087CA7">02</div>
+        <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.1;min-height:100px">Duration is the weak input</div>
+        <p style="font-size:25px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(38,26,32,0.12);color:rgba(38,26,32,0.72)">People estimate effort and call it duration, ignoring the queue time that dominates. Measure real cycle time from finished work and use that instead.</p>
+      </div>
+      <div style="padding:32px 34px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Newsreader',serif;font-size:58px;line-height:0.9;color:#087CA7">03</div>
+        <div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.1;min-height:100px">A ranking is not a plan</div>
+        <p style="font-size:25px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(38,26,32,0.12);color:rgba(38,26,32,0.72)">WSJF assumes the top item can start now. Without a capacity view it produces an order nobody can execute, and the list quietly gets ignored.</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+      <div style="padding:24px 30px;background:#DCE8EC;display:flex;flex-direction:column;gap:6px"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(0.44 0.11 233)">Use it when</div><p style="font-size:26px;line-height:1.4;margin:0">You have more initiatives than capacity and the argument has stalled on importance.</p></div>
+      <div style="padding:24px 30px;background:#EBE6D8;display:flex;flex-direction:column;gap:6px"><div style="font-size:24px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(38,26,32,0.5)">Don't</div><p style="font-size:26px;line-height:1.4;margin:0">Use it to compare a discovery bet against a delivery project. Options and deliverables do not share a denominator.</p></div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>24 / 28</span></div>
+</section>
+
+<section data-label="Options · Model" data-screen-label="Options · Model" data-speaker-notes="Buying information in tranches instead of committing or refusing." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:60px 96px 44px;display:flex;flex-direction:column;gap:30px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;height:26px;flex:none"><span style="width:10px;height:5px;background:rgba(38,26,32,0.28);display:block"></span><span style="width:18px;height:5px;background:rgba(38,26,32,0.45);display:block"></span><span style="width:26px;height:5px;background:#087CA7;display:block"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Real options</div></div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Real options and staged gates</h2>
+    </div>
+    <p style="font-size:24px;line-height:1.4;color:rgba(38,26,32,0.62);max-width:620px;margin:0">Timothy Luehrman, HBR 1998, applied to product bets. For a high-variance idea, commit a small amount and decide later.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:12px">
+    <div style="flex:1;display:grid;grid-template-columns:200px 1fr 1fr 220px;gap:28px;align-items:center;padding:22px 30px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)">
+      <div style="display:flex;flex-direction:column;gap:4px"><div style="font-family:'SUSE Mono',monospace;font-size:24px;color:oklch(0.44 0.11 233)">TRANCHE 0</div><div style="font-family:'Newsreader',serif;font-size:36px;line-height:1.05">Discovery</div></div>
+      <p style="font-size:25px;line-height:1.4;margin:0">Is the problem real, and does anyone pay to solve it today?</p>
+      <p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.65)">Kill if fewer than five of twenty target accounts describe the problem unprompted.</p>
+      <div style="font-family:'SUSE Mono',monospace;font-size:25px;text-align:right;white-space:nowrap">$0.4M · 8 weeks</div>
+    </div>
+    <div style="flex:1;display:grid;grid-template-columns:200px 1fr 1fr 220px;gap:28px;align-items:center;padding:22px 30px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14)">
+      <div style="display:flex;flex-direction:column;gap:4px"><div style="font-family:'SUSE Mono',monospace;font-size:24px;color:oklch(0.44 0.11 233)">TRANCHE 1</div><div style="font-family:'Newsreader',serif;font-size:36px;line-height:1.05">Prototype</div></div>
+      <p style="font-size:25px;line-height:1.4;margin:0">Can we build it well enough to be useful with the assets we already have?</p>
+      <p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.65)">Kill if accuracy stays below the threshold a human reviewer would accept.</p>
+      <div style="font-family:'SUSE Mono',monospace;font-size:25px;text-align:right;white-space:nowrap">$1.5M · 2 quarters</div>
+    </div>
+    <div style="flex:1;display:grid;grid-template-columns:200px 1fr 1fr 220px;gap:28px;align-items:center;padding:22px 30px;background:#DCE8EC">
+      <div style="display:flex;flex-direction:column;gap:4px"><div style="font-family:'SUSE Mono',monospace;font-size:24px;color:oklch(0.44 0.11 233)">TRANCHE 2</div><div style="font-family:'Newsreader',serif;font-size:36px;line-height:1.05">Design partners</div></div>
+      <p style="font-size:25px;line-height:1.4;margin:0">Will someone pay, and does the value survive contact with their data?</p>
+      <p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.65)">Kill unless two partners convert to paid at target price.</p>
+      <div style="font-family:'SUSE Mono',monospace;font-size:25px;text-align:right;white-space:nowrap">$5M · 2 quarters</div>
+    </div>
+    <div style="flex:1;display:grid;grid-template-columns:200px 1fr 1fr 220px;gap:28px;align-items:center;padding:22px 30px;background:#C3DAE2;border:1px solid #087CA7">
+      <div style="display:flex;flex-direction:column;gap:4px"><div style="font-family:'SUSE Mono',monospace;font-size:24px;color:oklch(0.44 0.11 233)">TRANCHE 3</div><div style="font-family:'Newsreader',serif;font-size:36px;line-height:1.05">Exercise</div></div>
+      <p style="font-size:25px;line-height:1.4;margin:0">Scale funding, a real P&amp;L, and a place in the portfolio review.</p>
+      <p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.65)">This is the only tranche that buys revenue. The first three buy information.</p>
+      <div style="font-family:'SUSE Mono',monospace;font-size:25px;text-align:right;white-space:nowrap">Full funding</div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>25 / 28</span></div>
+</section>
+
+<section data-label="Options · Applied" data-screen-label="Options · Applied" data-speaker-notes="Agent as a priced option rather than a product line." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:64px 96px 48px;display:flex;flex-direction:column;gap:30px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:60px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;height:26px;flex:none"><span style="width:10px;height:5px;background:rgba(38,26,32,0.28);display:block"></span><span style="width:18px;height:5px;background:rgba(38,26,32,0.45);display:block"></span><span style="width:26px;height:5px;background:#087CA7;display:block"></span></span><div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Real options · Applied</div></div>
+      <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Agent, priced as an option</h2>
+    </div>
+    <p style="font-size:24px;line-height:1.4;color:rgba(38,26,32,0.62);max-width:620px;margin:0"></p>
+  </div>
+  <div style="flex:1;min-height:0;display:grid;grid-template-columns:1.1fr 1fr;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">What the other frameworks said</div>
+      <div style="padding:24px 28px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:8px"><div style="font-family:'Newsreader',serif;font-size:36px;line-height:1.1">Growth–Share: kill it</div><p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.72)">$1M ARR, 0.1× relative share, no measurable segment growth. A question mark that fails its own gate.</p></div>
+      <div style="padding:24px 28px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:8px"><div style="font-family:'Newsreader',serif;font-size:36px;line-height:1.1">Ansoff: 8× risk</div><p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.72)">New product, new market. The highest bar in the matrix, and no forecast clears it honestly.</p></div>
+      <div style="padding:24px 28px;background:#DCE8EC;display:flex;flex-direction:column;gap:8px"><div style="font-family:'Newsreader',serif;font-size:36px;line-height:1.1">As an option: $1.9M to find out</div><p style="font-size:25px;line-height:1.4;margin:0;color:rgba(38,26,32,0.72)">Tranches 0 and 1 cost less than three months of Core Platform maintenance, and resolve the two questions the forecast was guessing at.</p></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#087CA7">The terms, written down</div>
+      <div style="padding:16px 24px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'SUSE Mono',monospace;font-size:24px;color:oklch(0.44 0.11 233)">UNCERTAINTY</div>
+        <p style="font-size:25px;line-height:1.4;margin:0">Will operations teams delegate multi-step work to software they cannot fully inspect?</p>
+      </div>
+      <div style="padding:16px 24px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'SUSE Mono',monospace;font-size:24px;color:oklch(0.44 0.11 233)">CAP</div>
+        <p style="font-size:25px;line-height:1.4;margin:0">$5M total across three tranches, 19 engineers, no claim on the Flow roadmap and no shared on-call.</p>
+      </div>
+      <div style="padding:16px 24px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'SUSE Mono',monospace;font-size:24px;color:oklch(0.44 0.11 233)">KILL CRITERIA</div>
+        <p style="font-size:25px;line-height:1.4;margin:0">Signed by CTO and CFO before tranche 0 opens. A missed criterion stops the work, without a review meeting.</p>
+      </div>
+      <div style="padding:16px 24px;background:#C3DAE2;border:1px solid #087CA7;display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'SUSE Mono',monospace;font-size:24px;color:oklch(0.44 0.11 233)">EXPECTED OUTCOME</div>
+        <p style="font-size:25px;line-height:1.4;margin:0">Most likely this dies at tranche 2 having cost $1.9M and answered the question. That counts as the option working.</p>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>26 / 28</span></div>
+</section>
+
+<section data-label="Comparison" data-screen-label="25" data-speaker-notes="The single most reusable slide. Which lens for which question." style="background:#F8F5EC;color:#2A1D24;font-family:'SUSE',sans-serif;padding:64px 80px 48px;display:flex;flex-direction:column;gap:26px">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#087CA7">Side by side</div>
+    <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Five lenses, five different jobs</h2>
+  </div>
+  <div style="flex:1;min-height:0;display:flex;flex-direction:column">
+    <div style="display:grid;grid-template-columns:1.1fr 1.3fr 1.2fr 1fr 1.3fr;gap:22px;padding:14px 0;border-bottom:2px solid rgba(38,26,32,0.5);font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.55)"><span>Framework</span><span>Axes or inputs</span><span>Unit of analysis</span><span>Output</span><span>Blind spot</span></div>
+    <div style="flex:1;display:grid;grid-template-columns:1.1fr 1.3fr 1.2fr 1fr 1.3fr;gap:22px;padding:20px 0;border-bottom:1px solid rgba(38,26,32,0.14);font-size:25px;line-height:1.35;align-items:start"><span style="font-family:'Newsreader',serif;font-size:38px;line-height:1.05;display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:grid;grid-template-columns:11px 11px;grid-template-rows:11px 11px;gap:3px;flex:none;justify-content:center;align-content:center"><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span></span><span>Growth–Share</span></span><span>Market growth × relative share</span><span>Revenue-generating product</span><span>Cash flow direction</span><span style="color:rgba(38,26,32,0.6)">Shared assets, option value</span></div>
+    <div style="flex:1;display:grid;grid-template-columns:1.1fr 1.3fr 1.2fr 1fr 1.3fr;gap:22px;padding:20px 0;border-bottom:1px solid rgba(38,26,32,0.14);font-size:25px;line-height:1.35;align-items:start"><span style="font-family:'Newsreader',serif;font-size:38px;line-height:1.05;display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;flex:none"><span style="width:22px;height:22px;box-sizing:border-box;border:2px solid rgba(38,26,32,0.3);display:flex;align-items:center;justify-content:center"><span style="width:13px;height:13px;box-sizing:border-box;border:2px solid #087CA7;display:flex;align-items:center;justify-content:center"><span style="width:4px;height:4px;background:#087CA7;display:block"></span></span></span></span><span>Innovation Ambition</span></span><span>Where to play × how to win</span><span>Investment programme</span><span>Budget split across three bands</span><span style="color:rgba(38,26,32,0.6)">Silent on which market</span></div>
+    <div style="flex:1;display:grid;grid-template-columns:1.1fr 1.3fr 1.2fr 1fr 1.3fr;gap:22px;padding:20px 0;border-bottom:1px solid rgba(38,26,32,0.14);font-size:25px;line-height:1.35;align-items:start"><span style="font-family:'Newsreader',serif;font-size:38px;line-height:1.05;display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:grid;grid-template-columns:11px 11px;grid-template-rows:11px 11px;gap:3px;flex:none;justify-content:center;align-content:center"><span style="display:block;background:rgba(38,26,32,0.22)"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:#087CA7"></span><span style="display:block;background:rgba(38,26,32,0.22)"></span></span><span>Ansoff</span></span><span>Products × markets</span><span>Growth initiative</span><span>Move ranked by risk</span><span style="color:rgba(38,26,32,0.6)">Capacity, and what to stop</span></div>
+    <div style="flex:1;display:grid;grid-template-columns:1.1fr 1.3fr 1.2fr 1fr 1.3fr;gap:22px;padding:20px 0;border-bottom:1px solid rgba(38,26,32,0.14);font-size:25px;line-height:1.35;align-items:start"><span style="font-family:'Newsreader',serif;font-size:38px;line-height:1.05;display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;gap:3px;flex:none"><span style="width:8px;height:16px;background:rgba(38,26,32,0.2);display:block"></span><span style="width:8px;height:16px;background:rgba(38,26,32,0.38);display:block"></span><span style="width:8px;height:16px;background:#087CA7;display:block"></span><span style="width:8px;height:16px;background:#087CA7;display:block"></span></span><span>Wardley Mapping</span></span><span>Value chain × evolution</span><span>Component or capability</span><span>Build, buy or rent</span><span style="color:rgba(38,26,32,0.6)">No ranking or sizing</span></div>
+    <div style="flex:1;display:grid;grid-template-columns:1.1fr 1.3fr 1.2fr 1fr 1.3fr;gap:22px;padding:20px 0;border-bottom:1px solid rgba(38,26,32,0.14);font-size:25px;line-height:1.35;align-items:start"><span style="font-family:'Newsreader',serif;font-size:38px;line-height:1.05;display:flex;align-items:center;gap:14px"><span style="width:44px;height:26px;display:flex;align-items:center;justify-content:center;gap:4px;flex:none"><span style="width:7px;height:24px;background:#087CA7;display:block"></span><span style="width:7px;height:16px;background:rgba(38,26,32,0.45);display:block"></span><span style="width:7px;height:9px;background:rgba(38,26,32,0.28);display:block"></span></span><span>Cost of Delay</span></span><span>Delay cost ÷ duration</span><span>Initiative in a queue</span><span>A ranked order</span><span style="color:rgba(38,26,32,0.6)">Ignores capacity; duration is guessed</span></div>
+  </div>
+  <div style="padding:22px 32px;background:#FFFEF9;border:1px solid rgba(38,26,32,0.14);font-size:26px;line-height:1.4">None of the five has an opinion on option value. Slides 25 and 26 close that gap.</div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(38,26,32,0.14);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(38,26,32,0.42)"><span>{{ brandLine }}</span><span>27 / 28</span></div>
+</section>
+
+<section data-label="Running the cycle" data-screen-label="16" data-speaker-notes="Close on cadence. A framework used once a year is theatre." style="background:#2A1D24;color:#F8F5EC;font-family:'SUSE',sans-serif;padding:76px 96px 56px;display:flex;flex-direction:column;gap:34px">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="font-size:24px;letter-spacing:0.18em;text-transform:uppercase;color:#3FA8CC">In practice</div>
+    <h2 style="font-family:'Newsreader',serif;font-size:68px;line-height:1.02;font-weight:500;margin:0">Run it on a cadence, or don't run it</h2>
+  </div>
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:28px">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
+      <div style="padding:32px 30px;border-top:3px solid #3FA8CC;display:flex;flex-direction:column;gap:14px"><div style="font-family:'SUSE Mono',monospace;font-size:24px;color:#7FC5DC">ANNUAL</div><div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.05;min-height:92px">Set the ambition split</div><p style="font-size:24px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(247,236,225,0.2);color:rgba(247,236,225,0.72)">Decide the core / adjacent / transformational ratio and ring-fence the teams.</p></div>
+      <div style="padding:32px 30px;border-top:3px solid rgba(247,236,225,0.3);display:flex;flex-direction:column;gap:14px"><div style="font-family:'SUSE Mono',monospace;font-size:24px;color:#7FC5DC">SEMI-ANNUAL</div><div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.05;min-height:92px">Redraw the map</div><p style="font-size:24px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(247,236,225,0.2);color:rgba(247,236,225,0.72)">Wardley, from the current user need. Check what has drifted right since last time.</p></div>
+      <div style="padding:32px 30px;border-top:3px solid rgba(247,236,225,0.3);display:flex;flex-direction:column;gap:14px"><div style="font-family:'SUSE Mono',monospace;font-size:24px;color:#7FC5DC">QUARTERLY</div><div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.05;min-height:92px">Check the cash map</div><p style="font-size:24px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(247,236,225,0.2);color:rgba(247,236,225,0.72)">Growth and share by product. Confirm the cows still fund the stars.</p></div>
+      <div style="padding:32px 30px;border-top:3px solid rgba(247,236,225,0.3);display:flex;flex-direction:column;gap:14px"><div style="font-family:'SUSE Mono',monospace;font-size:24px;color:#7FC5DC">PER INITIATIVE</div><div style="font-family:'Newsreader',serif;font-size:44px;line-height:1.05;min-height:92px">Name the growth move</div><p style="font-size:24px;line-height:1.45;margin:0;padding-top:22px;border-top:1px solid rgba(247,236,225,0.2);color:rgba(247,236,225,0.72)">Every funded initiative declares its Ansoff quadrant and clears that bar.</p></div>
+    </div>
+    <p style="font-size:32px;line-height:1.4;max-width:1300px;margin:0">None of these five tell you what to do. They make disagreement specific, which is most of the work.</p>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(247,236,225,0.2);padding-top:18px;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(247,236,225,0.5)"><span>{{ brandLine }}</span><span>28 / 28</span></div>
+</section>
+
+</x-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;brandLine&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Olli Ries - Portfolio Management&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { brandLine: this.props.brandLine ?? "Olli Ries - Portfolio Management" };
+  }
+}
+</script>
+</body>
+</html>
